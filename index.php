@@ -42,6 +42,8 @@
     
     
 
+
+
     ?>
 
 
@@ -55,29 +57,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></link>
 </head>
 <body>
-    <table class="table table-striped">
-  <thead>
-    <?php
-            foreach($hotels[0] as $key => $hotel){
-                  echo '<th scope="col">' . $key .'</th>';
-                };
-            
-        ?>
-  </thead>
-    <tbody>
-        <?php
-            foreach($hotels as $hotel){
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="parking">Parking:</label>
+                <select name="" id="parking">
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>  
 
-                echo "<tr>";
-                $hotel["parking"] ? $hotel["parking"] = 'yes': $hotel["parking"] = 'no';
-                foreach($hotel as $element){
-                    echo "<td>" . $element . "</td>";
-                };
-                echo "</tr>";
-            };
-        ?>   
-  </tbody>
-</table>
+
+    <form method="GET">
+        <table class="table table-striped">
+            <thead>
+                <?php
+                        foreach($hotels[0] as $key => $hotel){
+                            echo '<th scope="col">' . $key .'</th>';
+                            };
+                        
+                    ?>
+            </thead>
+            <tbody>
+                <?php
+                    foreach($hotels as $hotel){
+
+                        echo "<tr>";
+                        $hotel["parking"] ? $hotel["parking"] = 'yes': $hotel["parking"] = 'no';
+                        foreach($hotel as $element){
+                            echo "<td>" . $element . "</td>";
+                        };
+                        echo "</tr>";
+                    };
+                ?>   
+            </tbody>
+        </table>
+    </form>
     
 </body>
 </html>
