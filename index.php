@@ -69,8 +69,8 @@
             foreach($hotels as $hotel){
 
                 echo "<tr>";
-
-                foreach($hotel as $key => $element){
+                $hotel["parking"] ? $hotel["parking"] = 'yes': $hotel["parking"] = 'no';
+                foreach($hotel as $element){
                     echo "<td>" . $element . "</td>";
                 };
                 echo "</tr>";
