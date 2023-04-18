@@ -37,12 +37,10 @@
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
+        
     ];
-
-
-
-
+    
+    
 
     ?>
 
@@ -54,14 +52,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></link>
 </head>
 <body>
-    <p>
-        <?php foreach($hotels as $key => $hotel){ 
-            foreach($hotel as $element) {
-                echo $element . '<br/>';
-            }
-            }  ?>
-    </p>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">stelle</th>
+      <th scope="col">Distanza dal centro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <?php
+            foreach($hotels[0] as $key => $hotel){
+                  echo '<th scope="col">' . $hotel .'</th>';
+                };
+            
+        ?>
+    </tr>
+    <tr>
+    <?php
+            foreach($hotels[0] as $key => $hotel){
+                  echo '<th scope="col">' . $hotel .'</th>';
+                };
+            
+        ?>
+    </tr>
+    <tr>
+    <?php
+            foreach($hotels[2] as $key => $hotel){
+                  echo '<th scope="col">' . $hotel .'</th>';
+                };
+            
+        ?>
+    </tr>
+    <tr>
+    <?php
+            foreach($hotels[3] as $key => $hotel){
+                  echo '<th scope="col">' . $hotel .'</th>';
+                };
+            
+        ?>
+    </tr>
+  </tbody>
+</table>
+    
 </body>
 </html>
