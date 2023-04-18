@@ -55,7 +55,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></link>
 </head>
 <body>
-    <table class="table">
+    <table class="table table-striped">
   <thead>
     <?php
             foreach($hotels[0] as $key => $hotel){
@@ -64,39 +64,18 @@
             
         ?>
   </thead>
-  <tbody>
-    <tr>
-    <?php
-            foreach($hotels[0] as $key => $hotel){
-                  echo '<th scope="col">' . $hotel .'</th>';
+    <tbody>
+        <?php
+            foreach($hotels as $hotel){
+
+                echo "<tr>";
+
+                foreach($hotel as $key => $element){
+                    echo "<td>" . $element . "</td>";
                 };
-            
-        ?>
-    </tr>
-    <tr>
-    <?php
-            foreach($hotels[1] as $key => $hotel){
-                  echo '<th scope="col">' . $hotel .'</th>';
-                };
-            
-        ?>
-    </tr>
-    <tr>
-    <?php
-            foreach($hotels[2] as $key => $hotel){
-                  echo '<th scope="col">' . $hotel .'</th>';
-                };
-            
-        ?>
-    </tr>
-    <tr>
-    <?php
-            foreach($hotels[3] as $key => $hotel){
-                  echo '<th scope="col">' . $hotel .'</th>';
-                };
-            
-        ?>
-    </tr>
+                echo "</tr>";
+            };
+        ?>   
   </tbody>
 </table>
     
