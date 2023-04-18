@@ -57,13 +57,12 @@
 <body>
     <table class="table">
   <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Descrizione</th>
-      <th scope="col">Parcheggio</th>
-      <th scope="col">stelle</th>
-      <th scope="col">Distanza dal centro</th>
-    </tr>
+    <?php
+            foreach($hotels[0] as $key => $hotel){
+                  echo '<th scope="col">' . $key .'</th>';
+                };
+            
+        ?>
   </thead>
   <tbody>
     <tr>
@@ -76,7 +75,7 @@
     </tr>
     <tr>
     <?php
-            foreach($hotels[0] as $key => $hotel){
+            foreach($hotels[1] as $key => $hotel){
                   echo '<th scope="col">' . $hotel .'</th>';
                 };
             
